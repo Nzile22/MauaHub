@@ -2,28 +2,102 @@
 
 <PageTitle>Dashboard</PageTitle>
 
-<h3>Dashboard</h3>
+<div class="container-fluid">
 
-<div class="row">
+    <div class="mb-5">
 
-    <div class="col-md-3">
-        <DashboardCard Title="Today's Orders"
-                       Value="15" />
+        <h1 class="fw-bold">
+            Good Morning, Diana 👋
+        </h1>
+
+        <p class="text-muted fs-5">
+            Welcome back to MauaHub. Here's what's happening today.
+        </p>
+
     </div>
 
-    <div class="col-md-3">
-        <DashboardCard Title="Revenue"
-                       Value="KSh 24,500" />
+    <div class="row g-4">
+
+        <div class="col-lg-3 col-md-6">
+            <DashboardCard Title="Today's Orders"
+                           Value="15"
+                           Icon="bi bi-cart-fill"
+                           IconBackground="#0d6efd" />
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <DashboardCard Title="Today's Revenue"
+                           Value="KSh 24,500"
+                           Icon="bi bi-cash-stack"
+                           IconBackground="#198754" />
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <DashboardCard Title="Customers"
+                           Value="120"
+                           Icon="bi bi-people-fill"
+                           IconBackground="#fd7e14" />
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+            <DashboardCard Title="Low Stock"
+                           Value="8"
+                           Icon="bi bi-exclamation-triangle-fill"
+                           IconBackground="#dc3545" />
+        </div>
+
     </div>
 
-    <div class="col-md-3">
-        <DashboardCard Title="Customers"
-                       Value="120" />
-    </div>
+    <div class="row mt-5">
 
-    <div class="col-md-3">
-        <DashboardCard Title="Low Stock"
-                       Value="8" />
+        <div class="col-lg-4">
+
+            <div class="card border-0 shadow-sm">
+
+                <div class="card-body">
+
+                    <h4 class="mb-4">
+                        Quick Actions
+                    </h4>
+
+                    <button class="btn btn-success w-100 mb-3">
+                        + New Order
+                    </button>
+
+                    <button class="btn btn-outline-success w-100 mb-3">
+                        + Add Product
+                    </button>
+
+                    <button class="btn btn-outline-success w-100">
+                        + Register Customer
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-8">
+
+            <div class="card border-0 shadow-sm">
+
+                <div class="card-body">
+
+                    <h4 class="mb-4">
+                        Recent Orders
+                    </h4>
+
+                    <p class="text-muted">
+                        No orders available.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
 </div>
