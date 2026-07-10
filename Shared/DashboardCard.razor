@@ -1,0 +1,16 @@
+﻿@namespace MauaHub.Components.Shared
+@using Microsoft.AspNetCore.Components
+
+<div class="card shadow-sm p-3">
+    <h6>@Title</h6>
+    <h2>@Value</h2>
+</div>
+
+@code
+{
+    [Parameter]
+    public string Title { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Value { get; set; } = string.Empty;
+}
