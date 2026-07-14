@@ -1,0 +1,60 @@
+﻿@page "/products/add"
+
+@using MauaHub.Models
+@using MauaHub.Services
+
+@inject ProductService ProductService
+@inject NavigationManager Navigation
+
+<PageTitle>Add Product</PageTitle>
+
+<h2 class="mb-4">Add New Product</h2>
+
+<EditForm Model="product" OnValidSubmit="SaveProduct">
+
+    <DataAnnotationsValidator />
+
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <label class="form-label">Product Name</label>
+        <InputText class="form-control" @bind-Value="product.Name" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Description</label>
+        <InputText class="form-control" @bind-Value="product.Description" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Selling Price</label>
+        <InputNumber class="form-control" @bind-Value="product.SellingPrice" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Cost Price</label>
+        <InputNumber class="form-control" @bind-Value="product.CostPrice" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Quantity In Stock</label>
+        <InputNumber class="form-control" @bind-Value="product.QuantityInStock" />
+    </div>
+
+    <button class="btn btn-success">
+        Save Product
+    </button>
+
+</EditForm>
+
+@code
+{
+    private Product product = new();
+
+    private async Task SaveProduct()
+    {
+        await ProductService.AddProductAsync(product);
+
+        Navigation.NavigateTo("/products");
+    }
+}
